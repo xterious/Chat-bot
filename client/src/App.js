@@ -2,16 +2,20 @@ import './App.css';
 import './normal.css';
 import {useState} from 'react';
 import Image from './Image';
+import Image1 from './Image1';
 function App() {
   const [input,setInput] = useState("");
   const [chatLog,setChatLog]=useState([
     {
-      user: "sai",
+      user: "xterious",
       message: "How can I assist you!"
     },
   ]);
   function clearChats(){
-    setChatLog([]);
+    setChatLog([{
+      user: "xterious",
+      message: "How can I assist you!"
+    },]);
 
   }
 
@@ -32,7 +36,7 @@ function App() {
   });
   const data = await response.json();
   console.log(data.data.choices);
-  setChatLog([...chatLogNew, {user: "sai", message: `${data.data.choices[0].text}`}])
+  setChatLog([...chatLogNew, {user: "xterious", message: `${data.data.choices[0].text}`}])
   }
   return (
     <div className='App'>
@@ -67,21 +71,17 @@ function App() {
 
 const ChatMessage =({message}) => {
   return (
-  <div className={`chat-message ${message.user === "sai" && "chatgpt" }`}>
+  <div className={`chat-message ${message.user === "xterious" && "chatgpt" }`}>
               <div className="chat-message-center">
                 <div className={`avatar ${message.user === "gpt" && "chatgpt" }`}>
                   <div className=''></div>
-                {message.user ==="sai" && <Image/> }
+                {message.user ==="xterious" && <Image/> }
                 </div>
                 <div className="message">
                   {message.message} 
                 </div>
                 </div>
-                
               </div>
 )};
 
 export default App;
-
-// timestamp: 26:00
-//link : https://www.youtube.com/watch?v=qwM23_kF4v4
