@@ -2,7 +2,6 @@ import './App.css';
 import './normal.css';
 import {useState} from 'react';
 import Image from './Image';
-import Image1 from './Image1';
 function App() {
   const [input,setInput] = useState("");
   const [chatLog,setChatLog]=useState([
