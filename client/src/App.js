@@ -62,7 +62,12 @@ function App() {
             className='chat-input-textarea'/>
             </form>
           </div>
+          <div className='footer'>
+            <h4>Made with ❤️</h4>
+            <img className='avatar1-footer' src="https://sdk.bitmoji.com/render/panel/20048676-99259355723_21-s5-v1.png?transparent=1&palette=1&scale=1" alt="" />
+        </div>
         </section>
+        
     </div>
   );
 }
@@ -82,5 +87,6 @@ const ChatMessage =({message}) => {
                 </div>
               </div>
 )};
+
 
 export default App;
